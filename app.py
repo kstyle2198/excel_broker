@@ -48,6 +48,21 @@ print(f"면적: {면적계산식}")
 print(f"부피: {부피계산식}")
 
 
+class RoomCalculator:
+    def __init__(self):
+        pass
+
+    def 면적계산(self, 가로:str, 세로:str) -> str:
+        return f"={가로} * {세로}"
+
+    def 부피계산(self, 가로:str, 세로:str, 높이:str) -> str:
+        return f"={가로} * {세로} * {높이}"
+
+rc = RoomCalculator()
+면적계산식 = rc.면적계산(가로=가로, 세로=세로)
+부피계산식 = rc.부피계산(가로=가로, 세로=세로, 높이=높이)
+
+
 ## 결과파일 저장
 ws.sheet_view.showGridLines = False
 ws.column_dimensions['A'].bestFit = True # 칼럼폭 조정
